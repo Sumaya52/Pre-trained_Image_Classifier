@@ -1,0 +1,66 @@
+Argument 1: uploaded_images/
+Argument 2: alexnet
+Argument 3: dognames.txt
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:                     Fox_01.jpg  label:                        fox
+ 3 key:                     Dog_02.jpg  label:                        dog
+ 4 key:               Ice_Cream_01.jpg  label:                  ice cream
+{'Dog_01.jpg': ['dog', 'sussex spaniel', 0], 'Fox_01.jpg': ['fox', 'red fox, vulpes vulpes', 1], 'Dog_02.jpg': ['dog', 'wig', 0], 'Ice_Cream_01.jpg': ['ice cream', 'ice cream, icecream', 1]}
+
+     MATCH:
+
+                    Fox_01.jpg: 
+Real:                        fox   Classifier:         red fox, vulpes vulpes  
+PetLabelDog: 0  ClassLabelDog: 0
+
+              Ice_Cream_01.jpg: 
+Real:                  ice cream   Classifier:            ice cream, icecream  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:                 sussex spaniel  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                            wig  
+PetLabelDog: 1  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  0 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for ALEXNET Model Architecture ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   0
+
+
+*** Results Summary for Statistics ***
+pct_match           : 50.0
+pct_correct_dogs    : 50.0
+pct_correct_breed   : 0.0
+pct_correct_notdogs : 100.0
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:                        dog   Classifier:                            wig
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:                 sussex spaniel
+
+** Total Elapsed Runtime: 0:0:1
